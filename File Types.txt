@@ -1,0 +1,55 @@
+File Types: 
+.adf
+.atx
+.bak
+.bat
+.bin
+.bmp
+.cpg
+.csv
+.ctb
+.dce
+.doc
+.docx
+.ds$
+.dsc
+.dss
+.dst
+.dwf
+.dwg
+.dwt
+.eds
+.err
+.f01, .f02, ..., .f10 (multiple similar extensions)
+.freelist
+.g01, ..., g12 (multiple similar extensions)
+.gif
+.gdbindexes
+.gdbtable, gdbtablx (multiple similar extensions)
+.ghr, ghr_backup (multiple similar extensions)
+.hdf, hms (multiple similar extensions)
+.idx, ini (multiple similar extensions)
+.inp
+.jpg, JPG (multiple similar extensions)
+.jgw, jgw_ (multiple similar extensions)
+.las, lk# (multiple similar extensions)
+.lnk, log (multiple similar extensions)
+.mdb, mdb_ (multiple similar extensions)
+.mpp, mms (multiple similar extensions)
+.mp4, msg (multiple similar extensions)
+.mxs, mxd (multiple similar extensions)
+.objdefn, objindexes (multiple similar extensions)
+.out, ovr (multiple similar extensions)
+.p01, ..., p12 (multiple similar extensions)
+.pc3, pdata (multiple similar extensions)
+.pdf, PDF (multiple similar extensions)
+.png, PNG (multiple similar extensions)
+.prj, r01, ..., r12 (multiple similar extensions)
+rasmap, results (multiple similar extensions)
+run, sbx (multiple similar extensions)
+shp, shx (multiple similar extensions)
+spx, tif (multiple similar extensions)
+tiff, tin (multiple similar extensions)
+tmp, txt (multiple similar extensions)
+TIF, tinx (multiple similar extensions)
+ttx; xlsm; xlsx; xml; zip; vcf; xls; xlsx; xml
