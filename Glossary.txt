@@ -1,0 +1,110 @@
+Glossary: 
+	• AEC: Acronym for Architecture, Engineering, and Construction, the primary industries Kimley Horn serves.
+	• Archival Process: A method of moving older, less frequently accessed data to long-term storage.
+	• Asana: A popular web and mobile application designed for team collaboration and work management.
+	• AutoCAD: Computer-aided design software extensively used by Kimley Horn, requiring mapped drive letters.
+	• AWS File Gateway: An AWS Storage Gateway that provides a file interface to S3 object storage, allowing on-premises applications to use file protocols to access cloud storage.
+	• AWS GovCloud: A separate AWS region designed to host sensitive data and regulated workloads in the cloud, adhering to U.S. government security and compliance requirements.
+	• AWS S3: Amazon Web Services Simple Storage Service, used as the data backbone for Nasuni.
+	• Bluebeam: A PDF editor tailored for engineers, used by Kimley Horn for document management and collaboration.
+	• CAD Profiles: Customized settings and configurations in AutoCAD that define the working environment, including toolbars, command aliases, file paths, and other user preferences. These profiles help standardize AutoCAD setups across an organization.
+	• Caching Space: Local storage on the Nasuni filer used to keep frequently accessed files for faster access.
+	• Cost Point: The accounting system used by Kimley Horn for project management and financial tracking.
+	• CUI (Controlled Unclassified Information): Information that requires safeguarding or dissemination controls pursuant to and consistent with law, regulations, and government-wide policies.
+	• DFS (Distributed File System): A set of client and server services that allow an organization to organize many distributed SMB file shares into a distributed file system.
+	• DWG: The native file format for AutoCAD drawings.
+	• EC2: Refers to Amazon EC2 (Elastic Compute Cloud), a web service that provides resizable compute capacity in the cloud.
+	• Global File Locking: A feature ensuring only one user can edit a file at a time across the entire system.
+	• Global File System (GFS): A feature of Nasuni that manages file locking and collaboration across multiple locations.
+	• ITAR (International Traffic in Arms Regulations): U.S. regulatory regime to restrict and control the export of defense and military related technologies.
+	• K Drive: The primary network drive used by Kimley Horn for storing client project data.
+	• Mapped Network Drives: Virtual drives that appear as local drives but actually connect to network storage locations.
+	• Nasuni: A cloud-based file storage and synchronization system used by Kimley Horn for data management.
+	• Nasuni Filer: Local caching device in each office that interfaces with the Nasuni cloud storage.
+	• Nasuni-IQ: A data insights and analytics tool provided by Nasuni for better visibility into data usage and growth patterns.
+	• Petabyte: A unit of data storage equal to 1,000 terabytes or 1,000,000 gigabytes.
+	• Prevail: A tool chosen by Kimley Horn for handling CUI, utilizing AWS GovCloud.
+	• Production Data: The main working data for projects, stored primarily on the K drive.
+	• Reference Data: Lower-risk data such as drone footage and aerials, stored on the W drive.
+	• Relative Paths: File paths that are relative to the current working directory, used by AutoCAD.
+	• Retention Policy: Kimley Horn's policy of keeping data snapshots for 12 years and a day.
+	• ServiceNow: An IT service management platform used by Kimley Horn for automation, ticketing, and various IT operations and workflows.
+	• SharePoint: A Microsoft platform used by Kimley Horn for file sharing and collaboration, particularly with external parties.
+	• Snapshot: A point-in-time copy of data, used by Nasuni for version control and retention.
+	• Universal Paths: File paths that work across different systems, as opposed to relative paths used by AutoCAD.
+	• Volume: In the context of Nasuni, a large container for storing data, similar to a very large virtual hard drive.
+	• Worm Storage: Write Once, Read Many storage, a data storage technology used by Nasuni.
+	• Xref (External Reference): A feature in AutoCAD that allows linking external drawing files into the current drawing, often used for collaboration and managing complex projects.
+
+
+Current infrastructure: 
+​Storage
+	• Primary storage: Nasuni
+	• Backend storage: AWS S3 buckets
+	- Regions: US East 1 and US East 2
+	• Production volumes: Prod 1, Prod 2, Prod 3
+	• Total capacity: 1.82 petabytes
+	• Growth rate: ~7% per quarter, ~30% per year
+​Nasuni Architecture
+	• Nasuni filers (caching appliances) in each office
+	• Local caching for improved performance
+	• User access via mapped network drives (e.g., K drive)
+	• DFS namespace for dynamic path management and failover
+​Hardware
+	• Nasuni filers: HP DL380 Gen 10 Plus servers
+	• Owned and managed by Kimley Horn
+	• Virtualization: Vmware
+
+Data Lifecycle and retention:
+Current Policies
+	• Retention period: 12 years
+	• Daily snapshots for version history
+	• No automated archiving process
+Data Types
+	• Project files (CAD drawings, PDFs, etc.)
+	• Emails related to projects
+	• Various document types
+
+Existing Systems and Integrations:
+1. Cost Point 
+	• Accounting system
+	• Initial project data entry
+2. ServiceNow 
+	• Automation and ticketing platform
+	• Potential for integration with data management processes
+3. AutoCAD 
+	• Primary design software
+	• Integrates with Nasuni storage
+4. Bluebeam 
+	• PDF editor tailored for engineers
+	• Integrates with Nasuni storage
+5. Nasuni IQ (in progress) 
+	• Data insights and analytics tool
+
+Challenges and Limitations:
+1. Rapid data growth and increasing storage costs
+2. Lack of automated tools for data management and archiving
+3. Limited visibility into data usage patterns and growth
+4. Accidental folder moves by users
+5. No automated alerts for rapid data growth or potential issues
+6. Permissions management challenges
+7. Limited search capabilities within Nasuni
+
+Solution requirements: 
+1. Vendor Agnostic
+	• Benefits: 
+		○ Integrates with existing AWS infrastructure
+		○ Provides file interface to S3 storage
+		○ Allows for future flexibility in storage providers
+		
+2. Search and Find Specific Files
+	• Implement a robust search solution that can: 
+		○ Index file metadata and content
+		○ Provide fast and accurate search results
+		○ Support complex queries and filters
+		
+3. Consolidated Archive for K Drive and Other Data Sources
+	• Develop a centralized archive solution that: 
+		○ Accommodates Nasuni K drive data
+		○ Integrates with other data sources (e.g., SharePoint, email archives)
+		○ Maintains consistent metadata and access policies across sources
