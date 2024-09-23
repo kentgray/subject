@@ -1,0 +1,87 @@
+Challenges and Limitations
+	1. Rapid data growth and increasing storage costs
+	2. Lack of automated tools for data management and archiving
+	3. Limited visibility into data usage patterns and growth
+	4. Accidental folder moves by users
+	5. No automated alerts for rapid data growth or potential issues
+	6. Permissions management challenges
+	7. Limited search capabilities within Nasuni
+	
+Proposed Solution Requirements
+1. Vendor Agnostic
+	• Proposed technology: AWS File Gateway
+	• Benefits:
+	- Integrates with existing AWS infrastructure
+	- Provides file interface to S3 storage
+	- Allows for future flexibility in storage providers
+2. Search and Find Specific Files
+	• Implement a robust search solution that can:
+	- Index file metadata and content
+	- Provide fast and accurate search results
+	- Support complex queries and filters
+3. Consolidated Archive for K Drive and Other Data Sources
+	• Develop a centralized archive solution that:
+	- Accommodates Nasuni K drive data
+	- Integrates with other data sources (e.g., SharePoint, email archives)
+	- Maintains consistent metadata and access policies across sources
+	
+Proposed Archival Process
+	1. Project Initiation
+	- Create project folder in Nasuni via ServiceNow automation
+	- Apply standardized folder structure and naming conventions
+	2. Active Project Phase
+	- Monitor data growth and usage patterns
+	- Implement tiered storage based on access frequency
+	3. Project Closeout
+	- Trigger archival process based on project status in Cost Point
+	- Move data to read-only state in Nasuni
+	4. Archival
+	- Transfer data to AWS S3 using File Gateway
+	- Apply appropriate storage class (e.g., S3 Standard, S3 Glacier)
+	- Index metadata and content for search capabilities
+	5. Long-term Retention
+	- Implement lifecycle policies in S3 for cost-effective storage
+	- Ensure compliance with 12-year retention requirement
+	6. Data Retrieval
+	- Provide self-service portal for users to request archived data
+	- Implement approval workflow for sensitive or large data requests
+	
+Technology Stack for Proposed Solution
+	1. AWS Services
+	- S3: Primary storage for archived data
+	- File Gateway: Interface between on-premises and S3
+	- Lambda: Serverless computing for automation tasks
+	- CloudWatch: Monitoring and alerting
+	2. Search and Indexing
+	- AWS OpenSearch Service (formerly Elasticsearch)
+	- AWS Kendra for AI-powered search capabilities
+	3. Data Management and Workflow
+	- Extend ServiceNow capabilities for archive management
+	- Develop custom integrations with Cost Point and Nasuni
+	4. Security and Access Control
+	- AWS IAM for access management
+	- AWS KMS for encryption key management
+	5. Monitoring and Analytics
+	- AWS CloudWatch for operational monitoring
+	- AWS QuickSight for data analytics and visualization
+	
+Implementation Considerations
+	1. Data Migration Strategy
+	- Develop a phased approach for migrating existing data
+	- Prioritize based on project status and data access patterns
+	2. Performance Optimization
+	- Implement caching mechanisms for frequently accessed archived data
+	- Optimize search index for large-scale data sets
+	3. Cost Management
+	- Utilize S3 storage classes to balance performance and cost
+	- Implement data lifecycle policies for automatic transitions
+	4. Compliance and Governance
+	- Ensure WORM (Write Once Read Many) capabilities for regulatory compliance
+	- Implement audit logging for all data access and changes
+	5. User Training and Adoption
+	- Develop comprehensive training materials for new archival processes
+	- Provide ongoing support and documentation for end-users
+	6. Scalability and Future-proofing
+	- Design the solution to accommodate continued data growth
+	- Allow for integration of new data sources and technologies
+	By addressing these technical aspects and considerations, the proposed solution aims to meet Kimley Horn's requirements for a vendor-agnostic, searchable, and consolidated archive system while improving overall data management efficiency and cost-effectiveness.

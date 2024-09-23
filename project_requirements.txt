@@ -1,0 +1,77 @@
+Project: Future State Data Management System
+
+Project Overview:
+"Develop an Engagement Solution Plan for a comprehensive Data Lifecycle Management system, focusing on data categorization, retention, and archival processes across the enterprise."
+Key Objectives:
+a) Establish data categorization guidelines
+b) Define data retention guidelines
+c) Outline project lifecycle states
+d) Design an efficient archival process
+e) Provide a roadmap for implementing the data lifecycle solution company-wide
+Deliverables:
+a) Data Categorization Guidelines:
+
+Develop a framework for classifying data across all enterprise systems
+Consider factors such as data sensitivity, regulatory requirements, and business value
+Ensure guidelines are adaptable to various data types and sources
+
+b) Data Retention Guidelines:
+
+Create policies for how long different categories of data should be retained
+Align retention periods with legal, regulatory, and business requirements
+Include provisions for data that must be retained indefinitely
+
+c) Project Lifecycle States Definition:
+
+Define clear stages from project initiation to completion
+Include guidelines for data management at each stage
+Ensure alignment with existing project management methodologies
+
+d) Archival Process Design:
+
+Develop procedures for moving data to long-term storage
+Include criteria for when data should be archived
+Design processes for retrieval of archived data when needed
+
+e) Enterprise System Inventory (if time permits):
+
+Catalog systems that interact and share data within the enterprise
+Identify data flows between systems
+Highlight interdependencies that affect data categorization and retention
+
+f) Implementation Roadmap:
+
+Provide a phased approach for rolling out the data lifecycle solution
+Include timelines, milestones, and resource requirements
+Address potential challenges and mitigation strategies
+
+
+Technical Considerations:
+
+Integration with existing AWS infrastructure
+Scalability to handle current data volumes (approx. 1.8 petabytes) with projected growth
+Support for both active and archival data management
+Robust search and discovery capabilities across all data states
+Security and compliance measures, including access control and encryption
+Cost-effective storage solutions, considering both hot and cold storage options
+
+
+Engagement Approach:
+
+Collaborate with stakeholders from various departments to ensure comprehensive guidelines
+Consider industry best practices and regulatory requirements in all recommendations
+Ensure the solution is flexible enough to accommodate future changes in data management needs
+Provide clear, actionable recommendations that can be implemented across the organization
+
+
+Deliverable Format:
+
+Comprehensive written report detailing all aspects of the Engagement Solution Plan
+Visual aids such as flowcharts for data categorization and project lifecycle states
+Detailed implementation roadmap with Gantt chart or similar project management tool
+Executive summary highlighting key recommendations and expected outcomes
+
+
+
+Task for AI Agents:
+"Research and develop components of the Engagement Solution Plan for the Future State Data Management System based on these updated requirements. Each agent should focus on their area of expertise (e.g., data categorization, retention policies, archival processes, system integration) and collaborate to create a cohesive proposal that addresses all aspects of the project. Ensure all recommendations are practical, scalable, and aligned with industry best practices and regulatory requirements."
